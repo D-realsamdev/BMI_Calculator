@@ -4,6 +4,11 @@ import 'package:bmi_calculator/constant.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
 
 class ResultScreen extends StatelessWidget {
+  ResultScreen({@required this.bmiResult, @required this.resultText, @required this.resultInterpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String resultInterpretation;
 
 
   @override
@@ -33,11 +38,11 @@ class ResultScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      'Normal',
+                      resultText.toUpperCase(),
                       style: KResultTextOutput,
                     ),
                     Text(
-                      '26',
+                      bmiResult,
                       style: kBMIStyle,
                     ),
                     Text(
@@ -49,7 +54,7 @@ class ResultScreen extends StatelessWidget {
                       style: kBMINormalRangeResult,
                     ),
                     Text(
-                      'You BMI Result have a normal body weight. Good job!',
+                      resultInterpretation,
                       textAlign: TextAlign.center,
                       style: kBMIResultText,
                     ),
