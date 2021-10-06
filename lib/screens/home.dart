@@ -37,13 +37,13 @@ class _HomePageState extends State<HomePage> {
           ),
           ),
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-            color: Colors.white,
-            size: 30,
-          ),
-        ),
+        // leading: IconButton(
+        //   icon: Icon(
+        //     Icons.menu,
+        //     color: Colors.white,
+        //     size: 30,
+        //   ),
+        // ),
       ),
       //app body
       body: Column(
