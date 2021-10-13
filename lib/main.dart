@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/screens/login/login.dart';
+import 'package:bmi_calculator/screens/signup/register.dart';
 import 'package:flutter/material.dart';
 import 'screens/home.dart';
 import 'screens/result_screen.dart';
@@ -15,9 +17,11 @@ class BMICalculator extends StatelessWidget {
           textTheme: TextTheme(body1:TextStyle(color: Colors.white))
       ),
       initialRoute: '/',
-      routes: {
-        '/' : (context) => HomePage(),
-        '/first' : (context) => ResultScreen(),
+      routes: { 
+        '/' : (context) => LoginScreen(),
+        '/first' : (context) => RegisterScreen(),
+        '/second' : (context) => HomePage(),
+        '/third' : (context) => ResultScreen(),
       },
     );
   }

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:bmi_calculator/constant.dart';
 
-class BottomButton extends StatelessWidget {
-  BottomButton({@required this.onTap, this.buttonTitle});
+const kRegisterLoginButtonText = TextStyle(
+    fontSize: 20.0,
+    fontWeight: FontWeight.w500
+);
+const kRegisterLoginButton = Color(0xFF0A0D22);
+
+class RegisterLoginButton extends StatelessWidget {
+  RegisterLoginButton({@required this.onTap, this.buttonTitle});
 
   final Function onTap;
   final String buttonTitle;
@@ -15,12 +20,15 @@ class BottomButton extends StatelessWidget {
                    child: Center(
                       child: Text(
                         buttonTitle,
-                         style: kCalculateButtonText),
+                         style: kRegisterLoginButtonText),
                          ),
-                    color: kCalculateButton,
+                    color: kRegisterLoginButton,
                     margin: EdgeInsets.only(top: 10.0),
                     width: double.infinity,
                     height: 60.0,
+                    // shape: RoundedRectangleBorder(
+                    //      borderRadius: BorderRadius.circular(12), 
+                    // )
                   ),
                 );
   }
